@@ -10,6 +10,7 @@ namespace MyShop.Core.Contracts
 {
     public interface IBasketService
     {
+        void ClearBasket(HttpContextBase httpContext);
         void AddToBasket(HttpContextBase httpContext, string productId);
         void RemoveFromBasket(HttpContextBase httpContext, string itemId);
         List<BasketItemViewModel> GetBasketItems(HttpContextBase httpContext);
